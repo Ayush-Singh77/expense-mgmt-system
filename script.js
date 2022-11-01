@@ -70,7 +70,7 @@ function addTransactionDOM(transaction) {
   );
 
   item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(
+    rs{transaction.text} <span>rs{sign}rs{Math.abs(
     transaction.amount
   )}</span>
     <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
@@ -98,9 +98,9 @@ function updateValues() {
       .reduce((acc, item) => (acc += item), 0) *
     -1).toFixed(2);
 
-    balance.innerText=`rs${total}`;
-    money_plus.innerText = `rs${income}`;
-    money_minus.innerText = `rs${expense}`;
+    balance.innerText=`$rs{total}`;
+    money_plus.innerText = `$rs{income}`;
+    money_minus.innerText = `$rs{expense}`;
 }
 
 
