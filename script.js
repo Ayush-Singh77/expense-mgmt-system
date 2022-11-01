@@ -70,7 +70,7 @@ function addTransactionDOM(transaction) {
   );
 
   item.innerHTML = `
-   Rs${transaction.text} <span>Rs${sign}Rs${Math.abs(
+   ${transaction.text} <span>Rs{sign}${Math.abs(
     transaction.amount
   )}</span>
     <button class="delete-btn" onclick="removeTransaction(rs${transaction.id})">x</button>
